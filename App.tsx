@@ -1,7 +1,6 @@
 import React from "react";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { StatusBar } from "expo-status-bar";
 import Home from "./screens/Home";
 import Details from "./screens/Details";
 import { useFonts } from "expo-font";
@@ -37,7 +36,6 @@ const App = (props: Props) => {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Details" component={Details} />
       </Stack.Navigator>
-      <StatusBar style="auto" />
     </NavigationContainer>
   );
 };

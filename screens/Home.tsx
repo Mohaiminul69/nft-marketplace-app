@@ -1,13 +1,18 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import React, { useState } from "react";
+import { FocusedStatusBar } from "../components";
+import { COLORS } from "../utils";
 
 type Props = {};
 
 const Home = (props: Props) => {
   return (
-    <View>
-      <Text>Homey</Text>
-    </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <FocusedStatusBar backgroundColor={COLORS.primary} />
+      <View>
+        <Text>Home</Text>
+      </View>
+    </SafeAreaView>
   );
 };
 
