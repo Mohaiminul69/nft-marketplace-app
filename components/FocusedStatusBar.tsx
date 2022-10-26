@@ -8,7 +8,9 @@ type Props = {
 
 const FocusedStatusBar = (props: Props) => {
   const isFocused = useIsFocused();
-  return isFocused ? <StatusBar backgroundColor="#61dafb" /> : null;
+  return isFocused ? (
+    <StatusBar style="light" translucent={false} {...props} />
+  ) : null;
 };
 
 export default FocusedStatusBar;
