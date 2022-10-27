@@ -1,23 +1,36 @@
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
-import { FocusedStatusBar, HomeHeader } from "../components";
+import { FocusedStatusBar, HomeHeader, NFTCard } from "../components";
 import { COLORS, NFTData } from "../utils";
 
 type Props = {};
 
 const Home = (props: Props) => {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
       <FocusedStatusBar backgroundColor={COLORS.primary} />
       <View style={{ flex: 1, backgroundColor: "white" }}>
         <View style={{ zIndex: 0 }}>
           <FlatList
             data={NFTData}
-            renderItem={({ item }) => <Text>{item.name}</Text>}
+            renderItem={({ item }) => <NFTCard data={item} />}
             keyExtractor={(item) => item.id}
             showsVerticalScrollIndicator={false}
             ListHeaderComponent={<HomeHeader />}
           />
+        </View>
+        <View
+          style={{
+            position: "absolute",
+            top: 0,
+            bottom: 0,
+            right: 0,
+            left: 0,
+            zIndex: -1,
+          }}
+        >
+          <View style={{ backgroundColor: COLORS.primary, height: 300 }}></View>
+          <View style={{ backgroundColor: COLORS.white, flex: 1 }}></View>
         </View>
       </View>
     </SafeAreaView>
