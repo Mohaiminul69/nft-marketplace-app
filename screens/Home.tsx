@@ -7,7 +7,7 @@ type Props = {};
 
 const Home = (props: Props) => {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
       <FocusedStatusBar backgroundColor={COLORS.primary} />
       <View style={{ flex: 1, backgroundColor: "white" }}>
         <View style={{ zIndex: 0 }}>
@@ -30,7 +30,7 @@ const Home = (props: Props) => {
           }}
         >
           <View style={{ backgroundColor: COLORS.primary, height: 300 }}></View>
-          <View style={{ backgroundColor: COLORS.white, flex: 1 }}></View>
+          <View style={{ backgroundColor: "#98C1D9", flex: 1 }}></View>
         </View>
       </View>
     </SafeAreaView>
