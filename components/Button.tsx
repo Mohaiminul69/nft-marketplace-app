@@ -3,13 +3,15 @@ import { COLORS, FONTS, SHADOWS, SIZES } from "../utils";
 
 type CircleButtonProps = {
   imgUrl: string;
-  right: number;
-  top: number;
+  right?: number;
+  top?: number;
+  left?: number;
+  handlePress?: any;
 };
 type RectButtonProps = {
   minWidth: number;
   fontSize: number;
-  handlePress: any;
+  handlePress?: any;
 };
 
 export const CircleButton = ({
