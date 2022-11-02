@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import React from "react";
 import { Bid } from "../typing";
 import { COLORS, FONTS, SIZES } from "../utils";
@@ -56,5 +56,3 @@ const DetailsBids = ({ bid }: Props) => {
 };
 
 export default DetailsBids;
-
-const styles = StyleSheet.create({});
