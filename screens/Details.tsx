@@ -44,7 +44,7 @@ const Details = ({ route, navigation }: Props) => {
   const { data } = route.params;
   return (
     <View style={{ flex: 1 }}>
-      <FocusedStatusBar />
+      <FocusedStatusBar mode="dark" />
 
       <View
         style={{
